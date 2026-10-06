@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,9,20&height=240&section=header&text=OCTOCORE&fontSize=48&fontAlignY=36&desc=Advanced%20Cyber%20Systems%20%E2%80%A2%20Stealth%20Network%20Engineering%20%E2%80%A2%20Privacy%20Architecture&descAlignY=56&descSize=18&fontColor=ffffff" width="100%" alt="OctoCore Header" />
+  <img src="https://raw.githubusercontent.com/OctoCore-Dev/.github/main/assets/header.svg" width="100%" alt="OctoCore Header" />
 </p>
 
 <p align="center">
