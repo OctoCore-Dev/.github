@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="100%" height="340">
+  <defs>
+    <linearGradient id="terminalBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0c0c0c" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: "Cascadia Code", "Cascadia Mono", "Consolas", "Fira Code", monospace; }
+    .ui-font { font-family: "Segoe UI Variable", "Segoe UI", -apple-system, sans-serif; }
+  </style>
+
+  <!-- Outer Window Frame -->
+  <rect x="1" y="1" width="998" height="338" rx="10" fill="url(#terminalBg)" stroke="#383838" stroke-width="1.2" />
+
+  <!-- Terminal Tab Bar (Windows Terminal 11) -->
+  <path d="M 1,11 C 1,5.47 5.47,1 11,1 L 989,1 C 994.53,1 999,5.47 999,11 L 999,38 L 1,38 Z" fill="#1e1e1e" />
+  <line x1="1" y1="38" x2="999" y2="38" stroke="#2b2b2b" stroke-width="1" />
+
+  <!-- Active Tab: PowerShell -->
+  <g transform="translate(10, 6)">
+    <path d="M 0,0 L 210,0 Q 214,0 214,4 L 214,32 L 0,32 Z" fill="#0c0c0c" />
+    <!-- Active Indicator Pill on Top of Tab -->
+    <rect x="0" y="0" width="214" height="2" fill="#60CDFF" />
+    
+    <!-- PowerShell Icon (Fluent Chevron) -->
+    <path d="M 14,12 L 20,16 L 14,20" fill="none" stroke="#60CDFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="20" y1="20" x2="25" y2="20" stroke="#0078D4" stroke-width="2" stroke-linecap="round" />
+
+    <text class="ui-font" x="32" y="20" fill="#EAEAEA" font-size="12" font-weight="600">PowerShell 7.5 Core</text>
+    <text class="ui-font" x="194" y="20" fill="#888888" font-size="12">✕</text>
+  </g>
+
+  <!-- Inactive Tab: Ubuntu Server -->
+  <g transform="translate(228, 6)">
+    <text class="ui-font" x="14" y="20" fill="#888888" font-size="12">🐧 Ubuntu 24.04 (SSH)</text>
+    <text class="ui-font" x="156" y="20" fill="#666666" font-size="12">✕</text>
+  </g>
+
+  <!-- New Tab Plus & Dropdown -->
+  <g transform="translate(410, 15)">
+    <text class="ui-font" x="0" y="12" fill="#888888" font-size="14">+</text>
+    <text class="ui-font" x="20" y="11" fill="#888888" font-size="10">⌵</text>
+  </g>
+
+  <!-- TitleBar Caption Controls -->
+  <g transform="translate(900, 8)">
+    <rect x="0" y="0" width="28" height="22" rx="4" fill="transparent" />
+    <line x1="9" y1="11" x2="19" y2="11" stroke="#8A8A8A" stroke-width="1.2" />
+    <rect x="32" y="0" width="28" height="22" rx="4" fill="transparent" />
+    <rect x="41" y="6" width="10" height="10" rx="1.5" fill="none" stroke="#8A8A8A" stroke-width="1.2" />
+    <rect x="64" y="0" width="28" height="22" rx="4" fill="transparent" />
+    <line x1="73" y1="6" x2="83" y2="16" stroke="#8A8A8A" stroke-width="1.2" />
+    <line x1="83" y1="6" x2="73" y2="16" stroke="#8A8A8A" stroke-width="1.2" />
+  </g>
+
+  <!-- Terminal Content Area -->
+  <g transform="translate(24, 62)">
+    <!-- Line 1: Prompt 1 -->
+    <text class="mono" x="0" y="16" font-size="13">
+      <tspan fill="#60CDFF" font-weight="bold">PS C:\OctoCore&gt; </tspan>
+      <tspan fill="#CCCCCC">dotnet tool install -g OctoPublisher.Cli</tspan>
+    </text>
+
+    <!-- Line 2: Install Output -->
+    <text class="mono" x="0" y="38" fill="#76D275" font-size="12.5">
+      You can invoke the tool using the following command: octopublisher
+    </text>
+    <text class="mono" x="0" y="56" fill="#888888" font-size="12.5">
+      Tool &apos;octopublisher.cli&apos; (version &apos;1.0.1&apos;) was successfully installed from nuget.org.
+    </text>
+
+    <!-- Line 3: Prompt 2 -->
+    <text class="mono" x="0" y="90" font-size="13">
+      <tspan fill="#60CDFF" font-weight="bold">PS C:\OctoCore&gt; </tspan>
+      <tspan fill="#CCCCCC">octopublisher validate --spec store.json --store msstore --verbose</tspan>
+    </text>
+
+    <!-- Line 4: Execution Output -->
+    <text class="mono" x="0" y="114" fill="#0078D4" font-size="12.5" font-weight="bold">
+      [Store-as-Code Engine v10.0] Initializing Microsoft Store &amp; Xbox validation matrix...
+    </text>
+
+    <text class="mono" x="0" y="136" font-size="12.5">
+      <tspan fill="#00CC6A">  [✓] </tspan>
+      <tspan fill="#E0E0E0">Product Schema: </tspan>
+      <tspan fill="#999999">Obxodka Windows Client (MSIX Appx Identity verified)</tspan>
+    </text>
+
+    <text class="mono" x="0" y="156" font-size="12.5">
+      <tspan fill="#00CC6A">  [✓] </tspan>
+      <tspan fill="#E0E0E0">Metadata &amp; Locales: </tspan>
+      <tspan fill="#999999">Title, Description &amp; Keywords within official character limits</tspan>
+    </text>
+
+    <text class="mono" x="0" y="176" font-size="12.5">
+      <tspan fill="#00CC6A">  [✓] </tspan>
+      <tspan fill="#E0E0E0">Media &amp; Video Trailers: </tspan>
+      <tspan fill="#999999">4K UHD screenshots &amp; MP4 fast-start atom verified</tspan>
+    </text>
+
+    <text class="mono" x="0" y="196" font-size="12.5">
+      <tspan fill="#00CC6A">  [✓] </tspan>
+      <tspan fill="#E0E0E0">Test Matrix Suite: </tspan>
+      <tspan fill="#999999">125 Automated tests passed | 0 memory allocations (Native AOT)</tspan>
+    </text>
+
+    <!-- Summary Box -->
+    <rect x="0" y="214" width="720" height="34" rx="4" fill="#162618" stroke="#1E4620" stroke-width="1" />
+    <text class="mono" x="14" y="236" fill="#00FF66" font-size="12.5" font-weight="bold">
+      STATUS: ALL GATES PASSED (100% COMPLIANT) — READY FOR CI/CD DISPATCH
+    </text>
+  </g>
+</svg>
