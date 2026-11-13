@@ -1,0 +1,6 @@
+# Gemini Agent & Local Map Isolation
+.gemini/
+CODEBASE_MAP.md
+*.tmp
+.DS_Store
+Thumbs.db
